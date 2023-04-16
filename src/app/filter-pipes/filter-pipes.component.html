@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div *ngFor="let user of users">
+                <div>UserName: {{user.name | uppercase | shorten:5}}</div>
+                <div>UserDate: {{user.joinedDate | date : 'fullDate' | uppercase}}</div>
+            </div>
+        </div>
+    </div>
+</div>

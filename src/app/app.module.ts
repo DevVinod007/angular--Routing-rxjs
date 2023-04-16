@@ -12,25 +12,34 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthService } from './services/auth.service';
 import { AuthgaurdService } from './services/gaurds/Auth-gaurd.service';
 import { DeactivateGaurdService } from './services/gaurds/deactivate-gaurd.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserResolveService } from './services/resolve/user-resolve.service';
 import { UserService } from './services/user.service';
+import { TemplateFormComponent } from './template-form/template-form.component';
+import { ReactFormComponent } from './react-form/react-form.component';
+import { FilterPipesComponent } from './filter-pipes/filter-pipes.component';
+import { ShortenPipe } from './pipes/shorten.pipe';
 
 
 @NgModule({
   declarations: [
+    ShortenPipe,
     AppComponent,
     HomeComponent,
     UsersComponent,
     CategoriesComponent,
     UserComponent,
     EditUserComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    TemplateFormComponent,
+    ReactFormComponent,
+    FilterPipesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [AuthService,AuthgaurdService,DeactivateGaurdService, UserResolveService,UserService],
   bootstrap: [AppComponent]
