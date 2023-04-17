@@ -19,6 +19,8 @@ import { TemplateFormComponent } from './template-form/template-form.component';
 import { ReactFormComponent } from './react-form/react-form.component';
 import { FilterPipesComponent } from './filter-pipes/filter-pipes.component';
 import { ShortenPipe } from './pipes/shorten.pipe';
+import { FilterPipe } from './pipes/filter.pipe';
+import { PostsComponent } from './posts/posts.component';
 
 
 @NgModule({
@@ -34,6 +36,8 @@ import { ShortenPipe } from './pipes/shorten.pipe';
     TemplateFormComponent,
     ReactFormComponent,
     FilterPipesComponent,
+    FilterPipe,
+    PostsComponent,
   ],
   imports: [
     BrowserModule,

@@ -12,6 +12,7 @@ import { TemplateFormComponent } from "./template-form/template-form.component"
 import { UserComponent } from "./user/user.component"
 import { UsersComponent } from "./users/users.component"
 import { FilterPipesComponent } from "./filter-pipes/filter-pipes.component"
+import { PostsComponent } from "./posts/posts.component"
 
 const appRoutes:Routes = [ 
   {path:'',component:HomeComponent,data:{page:1,search:'vinod'}},
@@ -34,6 +35,7 @@ const appRoutes:Routes = [
   {path:'filterpipes',component:FilterPipesComponent},
   {path:'reactForm',component:ReactFormComponent},
   {path:'not-found',component:PageNotFoundComponent},
+  {path:'posts',component:PostsComponent},
   {path:'**',redirectTo:'not-found'}
 ]
 @NgModule({

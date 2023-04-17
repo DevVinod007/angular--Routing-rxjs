@@ -1,7 +1,18 @@
 <div class="container">
+    <div class="mt-2">{{appStatus | async}}</div>
     <div class="row">
         <div class="col-md-12">
-            <div *ngFor="let user of users">
+            <button (click)="AddUser()">Add user</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <input type="text" class="form-control" [(ngModel)] ="filteredString">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div *ngFor="let user of users | filter:filteredString">
                 <div>UserName: {{user.name | uppercase | shorten:5}}</div>
                 <div>UserDate: {{user.joinedDate | date : 'fullDate' | uppercase}}</div>
             </div>
